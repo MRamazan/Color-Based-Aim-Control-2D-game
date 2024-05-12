@@ -65,18 +65,3 @@ if __name__ == "__main__":
     img = pg.transform.scale(pg.image.load(r"C:\Users\PC\Downloads\853b792d9db7c1afed8be8f25694c61d.png"), (100, 200))
     instance = enc(img, pg.display.set_mode((1200, 1000)),random.randint(100, 800),random.randint(100, 800),1)
     instance.main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
