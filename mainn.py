@@ -202,16 +202,6 @@ class red_detect():
             pg.draw.rect(screen, (255, 255, 0), [m_x - 2, m_y, 1, 30], 9, 1)
             pg.draw.rect(screen, (255, 255, 0), [m_x - 16, m_y + 15, 30, 1], 9, 1)
             pg.display.update()
-
-
-
-
-
-
-
-
-
-
             
 
 
@@ -220,28 +210,24 @@ if __name__ == "__main__":
         manager_list = manager.list([0, 0])
         z = red_detect(manager_list)
 
-        # İlk olarak, veri üreten bir işlemi başlatın
+       
         producer_thread = threading.Thread(target=z.masking)
         producer_thread.start()
 
 
-        # Ardından, veri tüketen bir işlemi başlatın
+        
         consumer_process = Process(target=z.main)
         consumer_process.start()
 
-        # İşlemleri bekleyin
+    
         producer_thread.join()
 
 
-        # Veri tüketicinin sonlanması için bir işarettir
+      
         manager_list[0] = None
         manager_list[1] = None
 
         consumer_process.join()
-
-
-
-
 
 
 
