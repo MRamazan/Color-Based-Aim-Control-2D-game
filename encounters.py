@@ -46,7 +46,6 @@ class enc():
               pg.display.flip()
 
             else:
-                print("emaneman")
                 self.shoot = False
 
 
