@@ -52,7 +52,7 @@ class red_detect():
         cv2.destroyAllWindows()
 
     def new_enc(self):
-        img = pg.transform.scale(pg.image.load(r"C:\Users\PC\Downloads\853b792d9db7c1afed8be8f25694c61d.png"),
+        img = pg.transform.scale(pg.image.load("zombie.png"),
                                  (100, 200))
         screen = pg.display.set_mode((1080, 1000))
         enemy_x = random.randint(100, 900)
@@ -62,7 +62,7 @@ class red_detect():
 
     def aim(self):
         pg.init()
-        img = pg.transform.scale(pg.image.load(r"C:\Users\PC\Downloads\853b792d9db7c1afed8be8f25694c61d.png"),
+        img = pg.transform.scale(pg.image.load("zombie.png"),
                                  (100, 200))
         sayac = 0
         while True:
@@ -80,7 +80,7 @@ class red_detect():
 
     def main(self):
         pg.mouse.set_visible(False)
-        img = pg.transform.scale(pg.image.load(r"C:\Users\PC\Downloads\853b792d9db7c1afed8be8f25694c61d.png"),
+        img = pg.transform.scale(pg.image.load("zombie.png"),
                                  (100, 200))
         screen = pg.display.set_mode((1000, 1000))
         pg.init()
